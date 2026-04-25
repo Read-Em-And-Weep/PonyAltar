@@ -39,3 +39,5 @@ For Selene, selecting her also grants you the additional path of star points the
 ### Additional features
 
 You can force Chaos, Selene, Artemis and Athena, to spawn like regular gods. Some can only appear in certain biomes or have special requirements like vanilla however.
+
+If Nightmare Fear is installed, Selene, Artemis and Athena will not be able to be selected depending on whether the Vows of Isolation and Eclipse are invoked.
