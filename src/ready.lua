@@ -292,6 +292,27 @@ function mod.OpenAltarMenu()
 					OffsetY = offsetY,
 					Duration = delay
 				})
+				if (upgradeName == "NPC_Athena_01" or upgradeName == "NPC_Artemis_01") and GetNumShrineUpgrades("NightmareFearNoHelpMetaUpgrade") >= 1 then
+					components[buttonKey].OnPressedFunctionName = "BlockedKeepsakePresentation"
+					SetColor({ Id = components[buttonKey].Image, Color = Color.Black, Duration = 0 })
+					CreateTextBox({ 
+					Id = components[buttonKey].Id,
+					Text = "BlockedByNightmareFearIsolation_Tooltip",
+					UseDescription = true,
+					OffsetX = 0, OffsetY = 0,
+					Color = Color.Transparent,
+				})
+				elseif (upgradeName == "SpellDrop") and GetNumShrineUpgrades("NightmareFearEclipseMetaUpgrade") >= 1 then
+					components[buttonKey].OnPressedFunctionName = "BlockedKeepsakePresentation"
+					SetColor({ Id = components[buttonKey].Image, Color = Color.Black, Duration = 0 })
+					CreateTextBox({ 
+					Id = components[buttonKey].Id,
+					Text = "BlockedByNightmareFearEclipse_Tooltip",
+					UseDescription = true,
+					OffsetX = 0, OffsetY = 0,
+					Color = Color.Transparent,
+				})
+				end
 			end
 		end
 	end
